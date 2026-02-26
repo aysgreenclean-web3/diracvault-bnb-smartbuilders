@@ -1,0 +1,30 @@
+{
+  "replay_type": "wallet_telemetry",
+  "attack_class": "coincheck_hot_wallet_drain",
+
+  "signer_metrics": {
+    "expected_signers": 2,
+    "observed_signers": 2,
+    "signer_deviation_score": 0.41
+  },
+
+  "withdrawal_metrics": {
+    "withdrawal_velocity_usd_per_min": 2100000
+  },
+
+  "entropy_metrics": {
+    "transaction_entropy": 0.61
+  },
+
+  "timestamps": {
+    "t0_detected": 0,
+    "t1_authority": 95,
+    "t2_velocity": 180,
+    "t3_entropy": 300,
+    "t4_event_horizon": 420
+  },
+
+  "meta": {
+    "inspired_by": "Coincheck_2018"
+  }
+}

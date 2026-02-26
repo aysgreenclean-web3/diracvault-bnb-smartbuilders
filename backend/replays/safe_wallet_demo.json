@@ -1,0 +1,23 @@
+{
+  "replay_type": "wallet_telemetry",
+  "attack_class": "normal_activity",
+
+  "signer_metrics": {
+    "expected_signers": 2,
+    "observed_signers": 2,
+    "signer_deviation_score": 0.01
+  },
+
+  "withdrawal_metrics": {
+    "withdrawal_velocity_usd_per_min": 250
+  },
+
+  "entropy_metrics": {
+    "transaction_entropy": 0.05
+  },
+
+  "metadata": {
+    "label": "Safe Demo",
+    "description": "Normal operational wallet behavior with minimal deviation."
+  }
+}

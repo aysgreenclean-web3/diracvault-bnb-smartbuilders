@@ -1,0 +1,6 @@
+POST http://localhost:4000/compute-risk
+Content-Type: application/json
+
+{
+  "wallet_file": "wallet_baseline_like.json"
+}

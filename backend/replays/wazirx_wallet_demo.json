@@ -1,0 +1,41 @@
+{
+  "replay_type": "wallet_telemetry",
+  "attack_class": "wazirx_style_wallet_attack",
+
+  "wallet": {
+    "wallet_type": "exchange_hot_wallet",
+    "custody_model": "multisig"
+  },
+
+  "signer_metrics": {
+    "expected_signers": 5,
+    "observed_signers": 3,
+    "signer_deviation_score": 0.82
+  },
+
+  "withdrawal_metrics": {
+    "withdrawal_count_10min": 47,
+    "total_outflow_usd": 44650000,
+    "withdrawal_velocity_usd_per_min": 4200000,
+    "burst_compression_ratio": 9.6
+  },
+
+  "entropy_metrics": {
+    "transaction_entropy": 0.71,
+    "free_energy_delta": 0.63
+  },
+
+  "timestamps": {
+    "t0_detected": 0,
+    "t1_authority": 18,
+    "t2_velocity": 31,
+    "t3_entropy": 47,
+    "t4_event_horizon": 64
+  },
+
+  "meta": {
+    "replay_mode": "synthetic_wallet",
+    "inspired_by": "WazirX_2024",
+    "generated_at_utc": "2025-01-01T00:00:00Z"
+  }
+}

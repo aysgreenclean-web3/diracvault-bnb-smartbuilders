@@ -1,0 +1,30 @@
+{
+  "replay_type": "wallet_telemetry",
+  "attack_class": "defi_wallet_adjacent_drain",
+
+  "signer_metrics": {
+    "expected_signers": 3,
+    "observed_signers": 1,
+    "signer_deviation_score": 0.85
+  },
+
+  "withdrawal_metrics": {
+    "withdrawal_velocity_usd_per_min": 4700000
+  },
+
+  "entropy_metrics": {
+    "transaction_entropy": 0.74
+  },
+
+  "timestamps": {
+    "t0_detected": 0,
+    "t1_authority": 16,
+    "t2_velocity": 29,
+    "t3_entropy": 45,
+    "t4_event_horizon": 61
+  },
+
+  "meta": {
+    "inspired_by": "CreamFinance_2021"
+  }
+}

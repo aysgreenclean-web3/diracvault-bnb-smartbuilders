@@ -1,0 +1,30 @@
+{
+  "replay_type": "wallet_telemetry",
+  "attack_class": "ronin_validator_compromise",
+
+  "signer_metrics": {
+    "expected_signers": 9,
+    "observed_signers": 5,
+    "signer_deviation_score": 0.79
+  },
+
+  "withdrawal_metrics": {
+    "withdrawal_velocity_usd_per_min": 3900000
+  },
+
+  "entropy_metrics": {
+    "transaction_entropy": 0.69
+  },
+
+  "timestamps": {
+    "t0_detected": 0,
+    "t1_authority": 22,
+    "t2_velocity": 44,
+    "t3_entropy": 71,
+    "t4_event_horizon": 92
+  },
+
+  "meta": {
+    "inspired_by": "Ronin_2022"
+  }
+}

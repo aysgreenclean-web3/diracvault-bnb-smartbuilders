@@ -1,0 +1,30 @@
+{
+  "replay_type": "wallet_telemetry",
+  "attack_class": "kucoin_hot_wallet_breach",
+
+  "signer_metrics": {
+    "expected_signers": 4,
+    "observed_signers": 2,
+    "signer_deviation_score": 0.73
+  },
+
+  "withdrawal_metrics": {
+    "withdrawal_velocity_usd_per_min": 2600000
+  },
+
+  "entropy_metrics": {
+    "transaction_entropy": 0.67
+  },
+
+  "timestamps": {
+    "t0_detected": 0,
+    "t1_authority": 34,
+    "t2_velocity": 59,
+    "t3_entropy": 88,
+    "t4_event_horizon": 115
+  },
+
+  "meta": {
+    "inspired_by": "KuCoin_2020"
+  }
+}
