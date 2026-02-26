@@ -77,8 +77,8 @@ Mode switches to LOCKDOWN
 
 Transfer attempt reverts on-chain
 
-Contract Address (Testnet):
-PASTE_YOUR_CONTRACT_ADDRESS_HERE
+Contract Address (BNB Smart Chain Testnet):
+https://testnet.bscscan.com/address/0x6c1853b95aCCd39CB00277f89551843Da3aB604d
 
 Smart Contract Modes
 Mode	Value	Behavior
