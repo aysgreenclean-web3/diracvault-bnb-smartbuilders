@@ -1,141 +1,141 @@
-DiracVault
-Programmable Execution Firewall for BNB Smart Contract Wallets
+# DiracVault  
+## Programmable Execution Firewall for BNB Smart Contract Wallets  
 
-Built for the Smart Builders Challenge – Building the Future of Web3 on BNB Chain
+Built for the **Smart Builders Challenge – Building the Future of Web3 on BNB Chain**
 
 DiracVault is a wallet security infrastructure layer that transforms standard smart contract wallets into adaptive, risk-aware execution-controlled accounts.
 
-Live on-chain enforcement demonstrated on BNB Smart Chain Testnet.
+Live enforcement is demonstrated on **BNB Smart Chain Testnet**.
 
-Overview
+---
+
+## 🚨 The Problem
 
 Smart contracts execute transactions without behavioral awareness.
 
-They cannot detect:
+They cannot evaluate:
 
-Flash-loan exploit structures
-
-Abnormal value movement
-
-Replay-style attack patterns
-
-Sudden transaction deviations
+- Flash-loan exploit structures  
+- Abnormal value movement  
+- Replay-style attack patterns  
+- Sudden behavioral deviations  
 
 Most wallets provide warnings — but they do not enforce restrictions at the contract level.
 
+There is no programmable enforcement layer between transaction intent and execution.
+
+---
+
+## 🛡 The Solution
+
 DiracVault introduces programmable behavioral enforcement directly inside the smart contract.
 
-How It Works
+It operates as a two-layer architecture:
 
-DiracVault operates as a two-layer system:
+### 1️⃣ Off-Chain Risk Engine
+- Replay-based behavioral evaluation  
+- Deterministic risk score computation  
+- ECDSA signature generation  
 
-1️⃣ Off-Chain Risk Engine
-
-Replay-based behavioral evaluation
-
-Deterministic risk score computation
-
-ECDSA signature generation
-
-2️⃣ On-Chain Enforcement Contract
-
-Verifies authorized signature
-
-Stores risk score
-
-Switches execution mode
-
-Blocks transfers when risk threshold is exceeded
+### 2️⃣ On-Chain Enforcement Contract
+- Verifies authorized signer  
+- Stores signed risk score  
+- Switches execution mode  
+- Blocks transfers when risk threshold is exceeded  
 
 When high risk is detected, the contract automatically enters:
 
-NORMAL
+- **NORMAL**
+- **WARNING**
+- **LOCKDOWN**
 
-WARNING
+In **LOCKDOWN**, `transferBNB()` reverts.
 
-LOCKDOWN
+Enforcement is cryptographically verified and executed fully on-chain.
 
-In LOCKDOWN, transferBNB() reverts.
+---
 
-Enforcement is cryptographically verified and executed on-chain.
-
-Live Demonstration (BNB Smart Chain Testnet)
+## 🔬 Live Demonstration (BNB Smart Chain Testnet)
 
 Demo Flow:
 
-Select a historical exploit replay
+1. Select historical exploit replay  
+2. Compute behavioral risk score off-chain  
+3. Sign score via ECDSA  
+4. Submit signed score to smart contract  
+5. Contract verifies signature  
+6. Mode switches to LOCKDOWN  
+7. Transfer attempt reverts on-chain  
 
-Compute behavioral risk score off-chain
-
-Sign score via ECDSA
-
-Submit signed score to smart contract
-
-Contract verifies signature
-
-Mode switches to LOCKDOWN
-
-Transfer attempt reverts on-chain
-
-Contract Address (BNB Smart Chain Testnet):
+**Contract Address (Testnet):**  
 https://testnet.bscscan.com/address/0x6c1853b95aCCd39CB00277f89551843Da3aB604d
 
-Smart Contract Modes
-Mode	Value	Behavior
-NORMAL	0	Transfers allowed
-WARNING	1	Elevated risk
-LOCKDOWN	2	Transfers blocked
-Technical Stack
+---
 
-Frontend
+## ⚙ Smart Contract Modes
 
-React
+| Mode      | Value | Behavior            |
+|-----------|-------|--------------------|
+| NORMAL    | 0     | Transfers allowed  |
+| WARNING   | 1     | Elevated risk      |
+| LOCKDOWN  | 2     | Transfers blocked  |
 
-Ethers.js
+---
 
-TailwindCSS
+## 🧱 Technical Stack
 
-Recharts
+**Frontend**
+- React  
+- Ethers.js  
+- TailwindCSS  
+- Recharts  
 
-Backend
+**Backend**
+- Node.js  
+- Deterministic risk engine  
+- ECDSA signing  
 
-Node.js
+**Blockchain**
+- Solidity  
+- Hardhat  
+- BNB Smart Chain Testnet  
 
-Deterministic risk engine
+---
 
-ECDSA signing
+## 🔗 Ecosystem Alignment (BNB Wallet Track)
 
-Blockchain
+DiracVault aligns with BNB Chain priorities by introducing:
 
-Solidity
+- Layered wallet security primitives  
+- Risk-aware smart contract accounts  
+- On-chain enforced execution gating  
+- Infrastructure-level protection for DAOs and DeFi treasuries  
 
-Hardhat
+This system can evolve into a reusable Wallet Infrastructure SDK for next-generation BNB smart wallets and account abstraction systems.
 
-BNB Smart Chain Testnet
+---
 
-Repository Structure
+## 📁 Repository Structure
 
-frontend/ → React interface
-backend/ → Risk engine + signature generation
-contracts/ → Solidity enforcement contract
-scripts/ → Deployment scripts
+```
+frontend/      → React interface  
+backend/       → Risk engine + signature generation  
+contracts/     → Solidity enforcement contract  
+scripts/       → Deployment scripts  
+```
 
-Why This Matters for BNB
+---
 
-DiracVault introduces a programmable execution control layer for BNB wallets.
+## 📈 Why This Matters
 
-It enables:
+Blockchain systems rely on static permissions.
 
-Layered wallet security
+DiracVault demonstrates dynamic, programmable enforcement based on behavioral scoring.
 
-Risk-aware smart accounts
+It introduces a new execution-control primitive for BNB smart wallets.
 
-Treasury protection for DAOs
+---
 
-Behavioral security middleware
-
-This architecture can evolve into a Wallet Infrastructure SDK for next-generation BNB wallets.
-
-License
+## 📜 License
 
 MIT
